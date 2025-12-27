@@ -26,5 +26,6 @@ export const login = (credentials) => api.post('/auth/login/', credentials);
 export const addTransport = (data) => api.post('/transports/', data);
 export const updateTransport = (id, data) => api.put(`/transports/${id}/`, data);
 export const deleteTransport = (id) => api.delete(`/transports/${id}/`);
+export const deleteBooking = (id) => api.delete(`/bookings/${id}/`);
 
 export default api;

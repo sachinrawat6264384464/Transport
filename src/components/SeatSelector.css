@@ -1,0 +1,121 @@
+.seat-selector-container {
+    padding: var(--spacing-lg);
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.layout-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-sm);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.driver-area,
+.entrance {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+.bus-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+.seat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seat-group {
+    display: flex;
+    gap: 8px;
+}
+
+.aisle {
+    width: 40px;
+}
+
+.seat {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.seat:hover:not(.booked) {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.seat.selected {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary-dark);
+}
+
+.seat.booked {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.seat.window {
+    border-color: var(--secondary);
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.seat-mini {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.seat-mini.window {
+    border-color: var(--secondary);
+}
+
+.seat-mini.selected {
+    background: var(--primary);
+}
+
+.seat-mini.booked {
+    background: #e2e8f0;
+}
